@@ -13,3 +13,4 @@ createUserRoutes(app);
 createCourseRoutes(app);  
 
 app.listen(3000);
+//server activate..

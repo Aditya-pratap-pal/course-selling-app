@@ -1,6 +1,6 @@
 // const express = require('express');
 // const Router = express.Router
-// alternative of above code....
+// alternative of above code.......
 const {Router} = require('express')
 
 const userRouter = Router();
