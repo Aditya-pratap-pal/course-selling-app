@@ -1,13 +1,35 @@
-function createCourseRoutes(app){
-    app.post("/courses/purchase",(req,res)=>{
-        res.json({message: "chal gaya route...."})
-    })
-    app.get("/courses/preview",(req,res)=>{
-        res.json({message: "chal gaya route...."})
-    })
-}
+// const {Router} = require('express')
+// const courseRouter = Router();
 
-module.exports ={
-    createCourseRoutes: createCourseRoutes
-} 
-//want to push
+// // function createCourseRoutes(courseRouter){
+//     courseRouter.post("/purchase",(req,res)=>{
+//         res.json({message: "chal gaya route...."})
+//     })
+//     courseRouter.post("/purchase",(req,res)=>{
+//         res.json({message: "chal gaya route...."})
+//     })
+//     courseRouter.get("/preview",(req,res)=>{
+//         res.json({message: "chal gaya route...."})
+//     })
+// // }
+
+// module.exports = {
+//     courseRouter: courseRouter 
+// } 
+// //want to push
+
+
+
+import { Router } from 'express';
+
+const courseRouter = Router();
+
+courseRouter.post("/purchase", (req, res) => {
+    res.json({ message: "chal gaya route...." });
+});
+
+courseRouter.get("/preview", (req, res) => {
+    res.json({ message: "chal gaya route...." });
+});
+
+export { courseRouter };

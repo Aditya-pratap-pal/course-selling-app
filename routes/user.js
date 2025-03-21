@@ -1,22 +1,50 @@
-// const express = require('express');
-// const Router = express.Router
-// alternative of above code.......
-const {Router} = require('express')
+// // const express = require('express');
+// // const Router = express.Router
+// // alternative of above code.......
+// const {Router} = require('express')
 
-const userRouter = Router();
-// function createUserRoutes(app){
-    //<............after using userRouter I don't have need to use or paas app any more from one to another function.......>
-    userRouter.post("/user/signup",(req,res)=>{
-        res.json({message:"signup done....."})
-    })
-    userRouter.post("/user/signin",(req,res)=>{
-        res.json({message:"signup done....."})        
-    })
-    userRouter.get("/user/purchases",(req,res)=>{
-        res.json({message:"signup done....."})    
-    })
+// const userRouter = Router();
+// // function createUserRoutes(app){
+//     //<............after using userRouter I don't have need to use or paas app any more from one to another function.......>
+//     userRouter.post("/user/signup",(req,res)=>{
+//         res.json({message:"signup done....."})
+//     })
+//     userRouter.post("/user/signin",(req,res)=>{
+//         res.json({message:"signup done....."})        
+//     })
+//     userRouter.get("/user/purchases",(req,res)=>{
+//         res.json({message:"signup done....."})    
+//     })
+// // }
+
+// module.exports = {
+//     userRouter: userRouter
 // }
 
-module.exports = {
-    userRouter: userRouter
-}
+
+
+
+
+
+
+
+
+
+
+import { Router } from 'express';
+
+const userRouter = Router();
+
+userRouter.post("/user/signup", (req, res) => {
+    res.json({ message: "signup done....." });
+});
+
+userRouter.post("/user/signin", (req, res) => {
+    res.json({ message: "signin done....." });
+});
+
+userRouter.get("/user/purchases", (req, res) => {
+    res.json({ message: "purchase data....." });
+});
+
+export { userRouter };
