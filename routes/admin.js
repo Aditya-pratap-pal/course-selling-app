@@ -1,28 +1,3 @@
-// const {Router} = require('express');
-// const adminRouter = Router();
-// const {adminModel} =require("../db");
-
-// adminModel.post("/signup",function(req,res){
-//     res.json({
-//         message: "Signup endpoint"
-//     })
-// })
-// adminModel.post("/signin",function(req,res){
-//     res.json({
-//         message: "Signup endpoint"
-//     })
-// })
-// adminModel.post("/course",function(req,res){
-//     res.json({
-//         message: "Signup endpoint"
-//     })
-// })
-// adminModel.post("/course/bulk",function(req,res){
-//     res.json({
-//         message: "Signup endpoint"
-//     })
-// })
-
 
 
 import { Router } from 'express';
@@ -55,3 +30,28 @@ adminRouter.post("/course/bulk", function (req, res) {
 });
 
 export { adminRouter };
+// const {Router} = require('express');
+// const adminRouter = Router();
+// const {adminModel} =require("../db");
+
+// adminModel.post("/signup",function(req,res){
+//     res.json({
+//         message: "Signup endpoint"
+//     })
+// })
+// adminModel.post("/signin",function(req,res){
+//     res.json({
+//         message: "Signup endpoint"
+//     })
+// })
+// adminModel.post("/course",function(req,res){
+//     res.json({
+//         message: "Signup endpoint"
+//     })
+// })
+// adminModel.post("/course/bulk",function(req,res){
+//     res.json({
+//         message: "Signup endpoint"
+//     })
+// })
+

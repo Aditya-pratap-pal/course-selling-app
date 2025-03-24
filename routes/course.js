@@ -1,3 +1,18 @@
+
+
+import { Router } from 'express';
+
+const courseRouter = Router();
+
+courseRouter.post("/purchase", (req, res) => {
+    res.json({ message: "chal gaya route...." });
+});
+
+courseRouter.get("/preview", (req, res) => {
+    res.json({ message: "chal gaya route...." });
+});
+
+export { courseRouter };
 // const {Router} = require('express')
 // const courseRouter = Router();
 
@@ -18,18 +33,3 @@
 // } 
 // //want to push
 
-
-
-import { Router } from 'express';
-
-const courseRouter = Router();
-
-courseRouter.post("/purchase", (req, res) => {
-    res.json({ message: "chal gaya route...." });
-});
-
-courseRouter.get("/preview", (req, res) => {
-    res.json({ message: "chal gaya route...." });
-});
-
-export { courseRouter };
