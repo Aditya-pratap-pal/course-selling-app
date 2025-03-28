@@ -1,7 +1,7 @@
 
 
 import { Router } from 'express';
-import { adminModel } from '../db.js'; // Ensure the correct path & add .js extension
+import { adminModel } from '../db.js';
 
 const adminRouter = Router();
 
@@ -20,7 +20,7 @@ adminRouter.post("/signin", function (req, res) {
 adminRouter.post("/course", function (req, res) {
     res.json({
         message: "Course creation endpoint"
-    });
+    });z
 });
 
 adminRouter.post("/course/bulk", function (req, res) {

@@ -1,29 +1,53 @@
-
-
-
-
-
-
-
-
-
 import { Router } from 'express';
-
+import { userModel } from '../db.js';
+import jwt from 'jsonwebtoken';
+const jwtUserPassword = "aladid123";
+// const jwt = require('jsonwebtoken');
 const userRouter = Router();
 
-userRouter.post("/user/signup", (req, res) => {
+userRouter.post("/signup", async function(req, res){
+    const {email,password,firstName,lastName} = req.body;   
+    //hash the password so that plaintext password is not stored in the database...
+    try{
+        await userModel.create({
+            email,
+            password,
+            firstName,
+            lastName
+        });
+    }
+    catch{
+        res.json({error:"error in hashing password"});
+    }
     res.json({ message: "signup done....." });
 });
 
-userRouter.post("/user/signin", (req, res) => {
+userRouter.post("/signin",async function(req, res){
+    const{email,password} = req.body;
+    const user= await userModel.find({
+         email: email, 
+         password: password 
+    });
+    if(user){
+        const token = jwt.sign({
+
+        })
+    }
     res.json({ message: "signin done....." });
 });
 
-userRouter.get("/user/purchases", (req, res) => {
+userRouter.get("/purchases", (req, res) => {
     res.json({ message: "purchase data....." });
 });
 
 export { userRouter };
+
+
+
+
+
+
+
 // // const express = require('express');
 // // const Router = express.Router
 // // alternative of above code.......
